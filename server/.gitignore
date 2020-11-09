@@ -1,0 +1,11 @@
+node_modules/
+.vscode/
+package-lock.json
+.idea/
+dist/
+.env
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
