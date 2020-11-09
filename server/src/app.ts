@@ -3,6 +3,7 @@ import helmet from 'helmet';
 import dotenv from 'dotenv';
 import morgan from 'morgan';
 import cors from 'cors';
+import {tasking} from './routes/tasking';
 
 dotenv.config();
 const app = express();
@@ -14,6 +15,9 @@ app.use(cors({
     origin: process.env.CORS_ORIGIN
 }));
 app.use(express.json());
+
+// routes
+app.use('/tasks', tasking);
 
 // listen
 app.listen(process.env.PORT || 8080, () => {
